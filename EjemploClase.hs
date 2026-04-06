@@ -26,13 +26,34 @@ penultimo xs = last (init xs)
 --[False, True, False, True]
 
 --map(>) [1,2,3,4,5]
---5
+--[(>)1,(>)2,...]
 
 --map length [[1,2,7],[],[3,4]]
 --[3,0,2]
 
 --map (>2) [1,5,7,3,1,4]
---[5,7,3,4]
+--[False, True, True...]
 
 --map ((>2).length)) [[],[1,2,3],[7]]
---[1,2,3]
+--[False, True, False]
+
+--map :: (a -> b) -> [a] -> [b]
+--Escribir el tipo de map (*2)
+--Escribir el tipo de map (>)
+
+--filter:.
+
+--filter (>2) [1,5,7,3,1,4]
+--[5,7,3,4]
+
+--filter ((>2).length) [[],[1,2,3],[7]]
+--[[1,2,3]]
+
+--filter(>) [1,2,3,4]
+--[(>),1(>)2,(>)3,(>)4]
+
+--filter(even.head.tail.tail) [[1,2,4,5,7],[1,2,3,4],[2,5,6,7]]
+--[(even.head.tail.tail)[1,2,4,5,7],(even.head.tail.tail)[1,2,3,4],(even.head.tail.tail)[2,5,6,7]]
+--[(even.head)[4,5,7],(even.head)[3,4],(even.head)[6,7]]
+--[True,False,True]
+--[[1,2,4,5,7],[2,5,6,7]]
